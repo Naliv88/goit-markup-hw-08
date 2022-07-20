@@ -1,0 +1,88 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__titel {
+
+        @include fonts(700, 20px, 1.15);
+
+        text-align: center;
+        color: var(--color-title);
+
+    }
+
+    &__label {
+        position: relative;
+
+        display: block;
+        margin-top: 10px;
+
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__text {
+        display: block;
+
+        @include fonts(null, 12px, 1.17, 0.01em);
+    }
+
+    &__input {
+
+        width: 100%;
+        height: 40px;
+        padding-left: 42px;
+
+        margin-top: 4px;
+
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        &:focus,
+        &:hover {
+            border-color: var(--color-accent);
+            outline: var(--color-accent);
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: 14px;
+        left: 15px;
+    
+        .form__input:focus+&,
+        .form__input:hover+& {
+
+            fill: var(--color-accent);
+
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        resize: none;
+
+        padding: 12px 16px;
+        margin-top: 4px;
+
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    
+
+        &:hover,
+        &:focus {
+            border-color: var(--color-accent);
+            outline: var(--color-accent);
+            cursor: pointer;
+        }
+
+        &::placeholder {
+            @include fonts(null, 12px, 1.17, 0.01em);
+
+            color: rgba(117, 117, 117, 0.5);
+        }
+    }
+}

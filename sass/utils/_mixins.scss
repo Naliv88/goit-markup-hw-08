@@ -1,0 +1,28 @@
+@mixin fonts($fw: 400, $fs: 14px, $lh: 1.14, $ls: 0.03em) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+@mixin flex($disp: flex, $jc: center, $ai: center) {
+    display: $disp;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin position($pos, $direct1, $size1, $direct2, $size2) {
+    position: $pos;
+    #{$direct1}: $size1;
+    #{$direct2}: $size2;
+}
+
+//  @include fonts(null, 12px, 1.17, 0.01em);
+//  @include flex();
+//  @include size(0, 0);
+//  @include position(absolute, top, 0, left, 0);

@@ -1,0 +1,45 @@
+/* Advantages */
+.advantages {
+
+    @extend %section;
+
+    padding-bottom: 0;
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 270px;
+        text-align: left;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__item-title {
+        @include fonts(700, 14px, 1.14, null);
+ 
+        text-transform: uppercase;
+        color: var(--color-title);
+    }
+
+    &__item-text {
+        line-height: 1.71;
+        margin-top: 10px;
+    }
+
+    &__item-icon {
+        width: 270px;
+        height: 120px;
+        background: #F5F4FA;
+        border-radius: 4px;
+
+        @include flex();
+
+        margin-bottom: 30px;
+    }
+}

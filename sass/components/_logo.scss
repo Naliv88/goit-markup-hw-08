@@ -1,0 +1,17 @@
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    @include fonts(700, 26px, 1.19, null);
+    color: var(--color-accent);
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    &__studio--color {
+        color: #000;
+    }
+}

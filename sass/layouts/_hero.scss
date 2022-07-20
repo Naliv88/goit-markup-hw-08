@@ -1,0 +1,19 @@
+/* Hero */
+.hero {
+    letter-spacing: 0.06em;
+
+    padding: 200px 0;
+
+    background-color: var(--color-bg-hero);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bchero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-bg-first);
+
+    &__title {
+        @include fonts(900, 44px, 1.36, null);
+
+        text-transform: uppercase;
+    }
+}
