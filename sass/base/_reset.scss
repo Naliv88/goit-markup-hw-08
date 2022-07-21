@@ -11,10 +11,21 @@ p {
     padding: 0;
 }
 
+img {
+    display: block;
+    // max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
 .link {
     text-decoration: none;
 }
 
 .list {
     list-style: none;
+}
+
+*{
+    outline: 1px solid red;
 }

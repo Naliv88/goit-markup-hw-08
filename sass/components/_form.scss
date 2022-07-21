@@ -4,7 +4,11 @@
 
     &__titel {
 
-        @include fonts(700, 20px, 1.15);
+        @include fonts(700, 20px, 1.5);
+
+        @media screen and (min-width: 1200px) {
+            line-height: 1.15;
+        }
 
         text-align: center;
         color: var(--color-title);

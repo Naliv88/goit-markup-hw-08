@@ -5,16 +5,38 @@
 
     background-color: var(--color-bg-second);
     line-height: 1.19;
-    --items: 4;
+    
+
+    @media screen and (min-width: 480px) {
+        --items: 1;
+            
+    }
+            
+    @media screen and (min-width: 768px) {
+        --items: 2;
+            
+    }
+            
+    @media screen and (min-width: 1200px) {
+        --items: 4;    
+    }
 
 
     &__title {
-        @include fonts(700, 36px, 1.17, null);
+        @include fonts(700, 28px, 1.17, null);
 
         text-align: center;
 
         color: var(--color-title);
         margin-bottom: 50px;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 36px;      
+        }
+    }
+
+    &__list{
+        justify-content: center;
     }
 
     &__list-item {
@@ -22,6 +44,12 @@
 
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
+
+        @media screen and (max-width: 767px) {
+            width: 450px;
+            
+        }
+        
     }
 
     &__list-title {

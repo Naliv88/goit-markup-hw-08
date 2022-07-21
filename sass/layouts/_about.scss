@@ -1,6 +1,9 @@
 /* About */
 .about{
-
+    @media (max-width: 1199px) {
+        display: none;
+    }
+   
     @extend %section;
 
     &__list {
