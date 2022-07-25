@@ -19,16 +19,17 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
 
-  <body>
+  <body data-body>
     <!-- header -->
     <header class="header">
       <div class="container header__container">
+        <!-- Logo header -->
+        <a href="./index.html" class="link logo header__logo" lang="en"
+          >Web<span class="logo__studio logo__studio--color">Studio</span></a
+        >
+
+        <!-- navigation link -->
         <nav class="nav">
-          <!-- Logo header -->
-          <a href="./index.html" class="link logo header__logo" lang="en"
-            >Web<span class="logo__studio logo__studio--color">Studio</span></a
-          >
-          <!-- navigation link -->
           <ul class="list nav__list">
             <li class="nav__item">
               <a class="link nav__link" href="./index.html">Студия</a>
@@ -40,8 +41,63 @@
               <a class="link nav__link" href="#" data-modal-openn>Контакты</a>
             </li>
           </ul>
-          <!-- contact header -->
+
+          <!-- mobile burger -->
+          <button
+            type="button"
+            class="menu__burger"
+            aria-controls="menu__container"
+            aria-label="mobile burger"
+            aria-expanded="true"
+            data-menu-button
+          >
+            <svg class="menu__icon" width="40" height="40">
+              <use class="menu__icon-menu" href="./image/icons.svg#icon-menu"></use>
+              <use class="menu__icon-close" href="./image/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <!-- Header mobile menu -->
+          <div class="menu__container" id="menu__container" data-menu>
+            <ul class="menu__window-nav list">
+              <li class="menu__window-nav-item">
+                <a class="link" href="">Студия </a>
+              </li>
+              <li class="menu__window-nav-item">
+                <a class="link" href="">Портфолио</a>
+              </li>
+              <li class="menu__window-nav-item">
+                <a class="link" href="">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="menu__window-contacts list">
+              <li class="menu__window-contacts-item">
+                <a class="link accent" href=""> +38 096 111 11 11 </a>
+              </li>
+              <li class="menu__window-contacts-item">
+                <a class="link" href="">info@devstudio.com</a>
+              </li>
+            </ul>
+
+            <ul class="menu__window-socials list">
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href=""> Instagram </a>
+              </li>
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href="">Twitter</a>
+              </li>
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href="">Facebook</a>
+              </li>
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </nav>
+
+        <!-- contact header -->
         <ul class="list contact header__contact header__contact--align">
           <li class="contact__item">
             <a
@@ -94,7 +150,60 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img src="./image/imgp1.jpg" alt="Технокряк" width="370" height="294" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_01.webp    1x,
+                        ./image/portfolio/portfolio_ls_01@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_01.jpg    1x,
+                        ./image/portfolio/portfolio_ls_01@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_01.webp    1x,
+                        ./image/portfolio/portfolio_ms_01@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_01.jpg    1x,
+                        ./image/portfolio/portfolio_ms_01@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_01.webp    1x,
+                        ./image/portfolio/portfolio_ss_01@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_01.jpg    1x,
+                        ./image/portfolio/portfolio_ss_01@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img src="./image/imgp1.jpg" alt="Технокряк" width="450" height="284" />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -111,12 +220,65 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img
-                    src="./image/imgp2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_02.webp    1x,
+                        ./image/portfolio/portfolio_ls_02@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_02.jpg    1x,
+                        ./image/portfolio/portfolio_ls_02@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_02.webp    1x,
+                        ./image/portfolio/portfolio_ms_02@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_02.jpg    1x,
+                        ./image/portfolio/portfolio_ms_02@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_02.webp    1x,
+                        ./image/portfolio/portfolio_ss_02@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_02.jpg    1x,
+                        ./image/portfolio/portfolio_ss_02@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./image/imgp2.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="450"
+                      height="284"
+                    />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -135,7 +297,60 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img src="./image/imgp3.jpg" alt="Ресторан Seafood" width="370" height="294" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_03.webp    1x,
+                        ./image/portfolio/portfolio_ls_03@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_03.jpg    1x,
+                        ./image/portfolio/portfolio_ls_03@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_03.webp    1x,
+                        ./image/portfolio/portfolio_ms_03@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_03.jpg    1x,
+                        ./image/portfolio/portfolio_ms_03@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_03.webp    1x,
+                        ./image/portfolio/portfolio_ss_03@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_03.jpg    1x,
+                        ./image/portfolio/portfolio_ss_03@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img src="./image/imgp3.jpg" alt="Ресторан Seafood" width="450" height="284" />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -154,7 +369,60 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img src="./image/imgp4.jpg" alt="Проект Prime" width="370" height="294" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_04.webp    1x,
+                        ./image/portfolio/portfolio_ls_04@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_04.jpg    1x,
+                        ./image/portfolio/portfolio_ls_04@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_04.webp    1x,
+                        ./image/portfolio/portfolio_ms_04@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_04.jpg    1x,
+                        ./image/portfolio/portfolio_ms_04@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_04.webp    1x,
+                        ./image/portfolio/portfolio_ss_04@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_04.jpg    1x,
+                        ./image/portfolio/portfolio_ss_04@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img src="./image/imgp4.jpg" alt="Проект Prime" width="450" height="284" />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -171,7 +439,60 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img src="./image/imgp5.jpg" alt="Проект Boxes " width="370" height="294" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_05.webp    1x,
+                        ./image/portfolio/portfolio_ls_05@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_05.jpg    1x,
+                        ./image/portfolio/portfolio_ls_05@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_05.webp    1x,
+                        ./image/portfolio/portfolio_ms_05@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_05.jpg    1x,
+                        ./image/portfolio/portfolio_ms_05@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_05.webp    1x,
+                        ./image/portfolio/portfolio_ss_05@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_05.jpg    1x,
+                        ./image/portfolio/portfolio_ss_05@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img src="./image/imgp5.jpg" alt="Проект Boxes" width="450" height="284" />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -188,12 +509,65 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img
-                    src="./image/imgp6.jpg"
-                    alt="Inspiration has no Borders "
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_06.webp    1x,
+                        ./image/portfolio/portfolio_ls_06@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_06.jpg    1x,
+                        ./image/portfolio/portfolio_ls_06@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_06.webp    1x,
+                        ./image/portfolio/portfolio_ms_06@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_06.jpg    1x,
+                        ./image/portfolio/portfolio_ms_06@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_06.webp    1x,
+                        ./image/portfolio/portfolio_ss_06@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_06.jpg    1x,
+                        ./image/portfolio/portfolio_ss_06@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./image/imgp6.jpg"
+                      alt="Inspiration has no Borders"
+                      width="450"
+                      height="284"
+                    />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -210,12 +584,65 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img
-                    src="./image/imgp7.jpg"
-                    alt="Издание Limited Edition "
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_07.webp    1x,
+                        ./image/portfolio/portfolio_ls_07@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_07.jpg    1x,
+                        ./image/portfolio/portfolio_ls_07@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_07.webp    1x,
+                        ./image/portfolio/portfolio_ms_07@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_07.jpg    1x,
+                        ./image/portfolio/portfolio_ms_07@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_07.webp    1x,
+                        ./image/portfolio/portfolio_ss_07@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_07.jpg    1x,
+                        ./image/portfolio/portfolio_ss_07@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./image/imgp7.jpg"
+                      alt="Издание Limited Edition"
+                      width="450"
+                      height="284"
+                    />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -234,7 +661,60 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img src="./image/imgp8.jpg" alt="Проект LAB " width="370" height="294" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_08.webp    1x,
+                        ./image/portfolio/portfolio_ls_08@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_08.jpg    1x,
+                        ./image/portfolio/portfolio_ls_08@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_08.webp    1x,
+                        ./image/portfolio/portfolio_ms_08@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_08.jpg    1x,
+                        ./image/portfolio/portfolio_ms_08@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_08.webp    1x,
+                        ./image/portfolio/portfolio_ss_08@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_08.jpg    1x,
+                        ./image/portfolio/portfolio_ss_08@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img src="./image/imgp8.jpg" alt="Проект LAB" width="450" height="284" />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -251,7 +731,60 @@
             <li class="portfolio__item card-set-item">
               <a href="#" class="link portfolio__link">
                 <div class="overlay">
-                  <img src="./image/imgp9.jpg" alt="Growing Business " width="370" height="294" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_09.webp    1x,
+                        ./image/portfolio/portfolio_ls_09@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ls_09.jpg    1x,
+                        ./image/portfolio/portfolio_ls_09@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_09.webp    1x,
+                        ./image/portfolio/portfolio_ms_09@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ms_09.jpg    1x,
+                        ./image/portfolio/portfolio_ms_09@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_09.webp    1x,
+                        ./image/portfolio/portfolio_ss_09@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./image/portfolio/portfolio_ss_09.jpg    1x,
+                        ./image/portfolio/portfolio_ss_09@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img src="./image/imgp9.jpg" alt="Growing Business" width="450" height="284" />
+                  </picture>
+
                   <p class="overlay__card">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -369,5 +902,6 @@
         </div>
       </div>
     </footer>
+    <script src="./scripts/menu.js"></script>
   </body>
 </html>

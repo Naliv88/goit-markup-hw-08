@@ -1,10 +1,13 @@
 /* header */
 .header {
+    position: relative;
+
     border-bottom: 1px solid #ECECEC;
 
     &__container {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__logo {
@@ -18,7 +21,7 @@
     }
 
     &__contact{
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
 
@@ -50,17 +53,17 @@
 }
 
 /* Navigation */
-.nav {
-    display: none;
+.nav {   
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-    }
 
     &__list {
+        display: none;
+        
+        @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
         margin-left: 93px;
+    }
     }
 
     &__item {
@@ -91,7 +94,7 @@
 
         .current.nav__link::after {
             content: "";
-            @include position(absolute, bottom, 0, left, 0);
+            @include position(absolute, bottom, 8px, left, 0);
 
             transform: translateY(9px);
 

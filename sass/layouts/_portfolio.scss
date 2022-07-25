@@ -9,13 +9,37 @@
     /* button filter */
 
     &__filter {
-        width: 611px;
-        @include flex(flex, space-between, center);
+        width: auto;
+        @include flex(flex, null, center);
+
+        flex-wrap: wrap;
+
 
         margin-left: auto;
         margin-right: auto;
        
         margin-bottom: 50px;
+
+        gap: 10px;
+
+
+        @media (min-width: 480px) {
+
+            
+        }
+
+        @media (min-width: 758px) {
+            justify-content: center;
+            --items: 2;
+            gap: 8px;
+
+        
+        }
+            
+        @media (min-width: 1200px) {
+            --items: 3;
+
+        }
     }
 
     &__button {
@@ -43,6 +67,22 @@
     }
 
     /* article filter */
+
+    &__list{
+        --items: 1;
+
+        @media (min-width: 480px) {}
+        
+        @media (min-width: 758px) {
+            --items: 2;
+        
+        }
+        
+        @media (min-width: 1200px) {
+            --items: 3;
+
+        }
+    }
 
     &__description {
         border-left: 1px solid #EEEEEE;

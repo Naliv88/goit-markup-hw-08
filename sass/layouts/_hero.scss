@@ -8,11 +8,40 @@
     }
 
     background-color: var(--color-bg-hero);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bchero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero/hero_ss.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--color-bg-first);
+
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../image/hero/hero_ss@2x.jpg);
+    }
+    
+        @media screen and (min-width: 768px) {
+            background-image: url(../image/hero/hero_ms.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../image/hero/hero_ms@2x.jpg);
+            }
+        }
+    
+        @media screen and (min-width: 1200px) {
+            background-image: url(../image/hero/hero_ls.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../image/hero/hero_ls@2x.jpg);
+            }
+        }
 
     &__title {
         @include fonts(900, 26px, 1.62, 0.06em);

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
-  <body>
+  <body data-body>
     <!-- header -->
     <header class="header">
       <div class="container header__container">
@@ -40,8 +40,63 @@
               <a class="link nav__link" href="#" data-modal-openn>Контакты</a>
             </li>
           </ul>
-          <!-- contact header -->
+
+          <!-- mobile burger -->
+          <button
+            type="button"
+            class="menu__burger"
+            aria-controls="menu__container"
+            aria-label="mobile burger"
+            aria-expanded="true"
+            data-menu-button
+          >
+            <svg class="menu__icon" width="40" height="40">
+              <use class="menu__icon-menu" href="./image/icons.svg#icon-menu"></use>
+              <use class="menu__icon-close" href="./image/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <!-- Header mobile menu -->
+          <div class="menu__container" id="menu__container" data-menu>
+            <ul class="menu__window-nav list">
+              <li class="menu__window-nav-item">
+                <a class="link menu__window-nav-link" href="">Студия </a>
+              </li>
+              <li class="menu__window-nav-item">
+                <a class="link menu__window-nav-link" href="">Портфолио</a>
+              </li>
+              <li class="menu__window-nav-item">
+                <a class="link menu__window-nav-link" href="">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="menu__window-contacts list">
+              <li class="menu__window-contacts-item">
+                <a class="link accent" href=""> +38 096 111 11 11 </a>
+              </li>
+              <li class="menu__window-contacts-item">
+                <a class="link" href="">info@devstudio.com</a>
+              </li>
+            </ul>
+
+            <ul class="menu__window-socials list">
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href=""> Instagram </a>
+              </li>
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href="">Twitter</a>
+              </li>
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href="">Facebook</a>
+              </li>
+              <li class="menu__window-socials-item">
+                <a class="menu__window-socials-link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </nav>
+
+        <!-- contact header -->
         <ul class="list contact header__contact header__contact--align">
           <li class="contact__item">
             <a
@@ -64,11 +119,6 @@
             >
           </li>
         </ul>
-        <button class="menu">
-          <svg class="menu__icon" width="24" height="16">
-            <use href="./image/icons.svg#icon-menu"></use>
-          </svg>
-        </button>
       </div>
     </header>
     <!-- main -->
@@ -142,15 +192,71 @@
           <h2 class="about__title">Чем мы занимаемся</h2>
           <ul class="list about__list card-set">
             <li class="about__item card-set-item">
-              <img src="./image/box.jpg" alt="создание кода" width="370" height="294" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/advantages/advantages_ls_01.webp    1x,
+                    ./image/advantages/advantages_ls_01@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/advantages/advantages_ls_01.jpg    1x,
+                    ./image/advantages/advantages_ls_01@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img src="./image/box.jpg" alt="создание кода" width="370" height="294" />
+              </picture>
               <p class="about__text">Десктопные приложения</p>
             </li>
             <li class="about__item card-set-item">
-              <img src="./image/box2.jpg" alt="создание приложения" width="370" height="294" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/advantages/advantages_ls_02.webp    1x,
+                    ./image/advantages/advantages_ls_02@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/advantages/advantages_ls_02.jpg    1x,
+                    ./image/advantages/advantages_ls_02@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img src="./image/box2.jpg" alt="создание приложения" width="370" height="294" />
+              </picture>
+
               <p class="about__text">Мобильные приложения</p>
             </li>
             <li class="about__item card-set-item">
-              <img src="./image/box3.jpg" alt="дизайн" width="370" height="294" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/advantages/advantages_ls_03.webp    1x,
+                    ./image/advantages/advantages_ls_03@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/advantages/advantages_ls_03.jpg    1x,
+                    ./image/advantages/advantages_ls_03@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img src="./image/box3.jpg" alt="дизайн" width="370" height="294" />
+              </picture>
+
               <p class="about__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -163,12 +269,47 @@
           <h2 class="persons__title">Наша команда</h2>
           <ul class="list persons__list card-set">
             <li class="persons__list-item card-set-item">
-              <img
-                src="./image/img.jpg"
-                alt="фотография Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_01.webp 1x, ./image/about/about_ls_01@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_01.jpg 1x, ./image/about/about_ls_01@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_01.webp 1x, ./image/about/about_ms_01@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_01.jpg 1x, ./image/about/about_ms_01@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_01.webp 1x, ./image/about/about_ss_01@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_01.jpg 1x, ./image/about/about_ss_01@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./image/img.jpg"
+                  alt="фотография Игорь Демьяненко"
+                  width="450"
+                  height="480"
+                />
+              </picture>
+
               <div class="persons__descrip">
                 <h3 class="persons__list-title">Игорь Демьяненко</h3>
                 <p class="persons__list-text" lang="en">Product Designer</p>
@@ -229,7 +370,46 @@
               </div>
             </li>
             <li class="persons__list-item card-set-item">
-              <img src="./image/img1.jpg" alt="фотография Ольга Репина" width="270" height="260" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_02.webp 1x, ./image/about/about_ls_02@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_02.jpg 1x, ./image/about/about_ls_02@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_02.webp 1x, ./image/about/about_ms_02@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_02.jpg 1x, ./image/about/about_ms_02@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_02.webp 1x, ./image/about/about_ss_02@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_02.jpg 1x, ./image/about/about_ss_02@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./image/img1.jpg"
+                  alt="фотография Игорь Демьяненко"
+                  width="450"
+                  height="480"
+                />
+              </picture>
               <div class="persons__descrip">
                 <h3 class="persons__list-title">Ольга Репина</h3>
                 <p class="persons__list-text" lang="en">Frontend Developer</p>
@@ -290,12 +470,47 @@
               </div>
             </li>
             <li class="persons__list-item card-set-item">
-              <img
-                src="./image/img2.jpg"
-                alt="фотография Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_03.webp 1x, ./image/about/about_ls_03@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_03.jpg 1x, ./image/about/about_ls_03@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_03.webp 1x, ./image/about/about_ms_03@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_03.jpg 1x, ./image/about/about_ms_03@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_03.webp 1x, ./image/about/about_ss_03@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_03.jpg 1x, ./image/about/about_ss_03@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./image/img2.jpg"
+                  alt="фотография Игорь Демьяненко"
+                  width="450"
+                  height="480"
+                />
+              </picture>
+
               <div class="persons__descrip">
                 <h3 class="persons__list-title">Николай Тарасов</h3>
                 <p class="persons__list-text" lang="en">Marketing</p>
@@ -356,12 +571,47 @@
               </div>
             </li>
             <li class="persons__list-item card-set-item">
-              <img
-                src="./image/img3.jpg"
-                alt="фотография Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_04.webp 1x, ./image/about/about_ls_04@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./image/about/about_ls_04.jpg 1x, ./image/about/about_ls_04@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_04.webp 1x, ./image/about/about_ms_04@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./image/about/about_ms_04.jpg 1x, ./image/about/about_ms_04@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_04.webp 1x, ./image/about/about_ss_04@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./image/about/about_ss_04.jpg 1x, ./image/about/about_ss_04@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./image/img3.jpg"
+                  alt="фотография Игорь Демьяненко"
+                  width="450"
+                  height="480"
+                />
+              </picture>
+
               <div class="persons__descrip">
                 <h3 class="persons__list-title">Михаил Ермаков</h3>
                 <p class="persons__list-text" lang="en">UI Designer</p>
@@ -648,5 +898,6 @@
     </div>
 
     <script src="./scripts/modal.js"></script>
+    <script src="./scripts/menu.js"></script>
   </body>
 </html>
