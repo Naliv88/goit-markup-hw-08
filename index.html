@@ -23,7 +23,7 @@
     <header class="header">
       <div class="container header__container">
         <!-- Logo header -->
-        <a href="./index.html" class="link logo header__logo" lang="en"
+        <a href="./index.html" class="link logo header__logo" lang="en" data-logo
           >Web<span class="logo__studio logo__studio--color">Studio</span></a
         >
 
@@ -40,61 +40,67 @@
               <a class="link nav__link" href="#" data-modal-openn>Контакты</a>
             </li>
           </ul>
-
-          <!-- mobile burger -->
-          <button
-            type="button"
-            class="menu__burger"
-            aria-controls="menu__container"
-            aria-label="mobile burger"
-            aria-expanded="true"
-            data-menu-button
-          >
-            <svg class="menu__icon" width="40" height="40">
-              <use class="menu__icon-menu" href="./image/icons.svg#icon-menu"></use>
-              <use class="menu__icon-close" href="./image/icons.svg#icon-close"></use>
-            </svg>
-          </button>
-
-          <!-- Header mobile menu -->
-          <div class="menu__container" id="menu__container" data-menu>
-            <ul class="menu__window-nav list">
-              <li class="menu__window-nav-item">
-                <a class="link menu__window-nav-link" href="">Студия </a>
-              </li>
-              <li class="menu__window-nav-item">
-                <a class="link menu__window-nav-link" href="">Портфолио</a>
-              </li>
-              <li class="menu__window-nav-item">
-                <a class="link menu__window-nav-link" href="">Контакты</a>
-              </li>
-            </ul>
-
-            <ul class="menu__window-contacts list">
-              <li class="menu__window-contacts-item">
-                <a class="link accent" href=""> +38 096 111 11 11 </a>
-              </li>
-              <li class="menu__window-contacts-item">
-                <a class="link" href="">info@devstudio.com</a>
-              </li>
-            </ul>
-
-            <ul class="menu__window-socials list">
-              <li class="menu__window-socials-item">
-                <a class="menu__window-socials-link link" href=""> Instagram </a>
-              </li>
-              <li class="menu__window-socials-item">
-                <a class="menu__window-socials-link link" href="">Twitter</a>
-              </li>
-              <li class="menu__window-socials-item">
-                <a class="menu__window-socials-link link" href="">Facebook</a>
-              </li>
-              <li class="menu__window-socials-item">
-                <a class="menu__window-socials-link link" href="">LinkedIn</a>
-              </li>
-            </ul>
-          </div>
         </nav>
+
+        <!-- mobile burger -->
+        <button
+          type="button"
+          class="menu__burger"
+          aria-controls="menu__container"
+          aria-label="mobile burger"
+          aria-expanded="true"
+          data-menu-button
+        >
+          <svg class="menu__icon" width="40" height="40">
+            <use class="menu__icon-menu" href="./image/icons.svg#icon-menu"></use>
+            <use class="menu__icon-close" href="./image/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <!-- Header mobile menu -->
+        <div class="menu__container" id="menu__container" data-menu>
+          <ul class="menu__window-nav list">
+            <li class="menu__window-nav-item">
+              <a class="link menu__container-link menu__window-nav-link current" href="./index.html"
+                >Студия
+              </a>
+            </li>
+            <li class="menu__window-nav-item">
+              <a class="link menu__container-link menu__window-nav-link" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="menu__window-nav-item">
+              <a class="link menu__container-link menu__window-nav-link" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="menu__window-contacts list">
+            <li class="menu__window-conta">
+              <a class="link menu__window-phone menu__container-link accent current" href="">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="menu__window-contacts-item">
+              <a class="link menu__window-mail menu__container-link" href="">info@devstudio.com</a>
+            </li>
+          </ul>
+
+          <ul class="menu__window-socials list">
+            <li class="menu__window-socials-item">
+              <a class="menu__window-socials-link link current" href=""> Instagram </a>
+            </li>
+            <li class="menu__window-socials-item">
+              <a class="menu__window-socials-link link current" href="">Twitter</a>
+            </li>
+            <li class="menu__window-socials-item">
+              <a class="menu__window-socials-link link current" href="">Facebook</a>
+            </li>
+            <li class="menu__window-socials-item">
+              <a class="menu__window-socials-link link current" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
 
         <!-- contact header -->
         <ul class="list contact header__contact header__contact--align">
@@ -731,7 +737,7 @@
       <div class="container footer__contacts">
         <div>
           <!-- logo footer -->
-          <a href="./" class="link logo"
+          <a href="./" class="link logo logo--center"
             >Web<span class="logo__footer logo__footer--color">Studio</span></a
           >
           <!-- contacts footer -->

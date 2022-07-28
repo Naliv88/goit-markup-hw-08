@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-left: auto;
+    z-index: 101;
     
     &:hover, &:focus{
         fill: var(--color-accent);
@@ -27,26 +27,58 @@
 
     &__container{
         position: absolute;
-        top: 100%;
-        left: 0%;
+        top: 0;
+        left: 0;
         z-index: 100;
 
         display: none;
 
-        width: 100%;
-        height: 786px;
+        width: 100vw;
+        height: 100vh;
         padding: 48px 40px;
 
         background-color: var(--color-bg-first);
+        text-align: left;
 
         
     }
-    &__container.is-open{
+
+    &__window-phone{
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        
+        color: var(--color-accent);
+
+    }
+
+    &__window-mail {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+
+        margin-top: 32px;
+
+    }
+    &__window-contacts-item{
+        margin-top: 32px;
+    }
+
+    &__container-link{
+        color: #212121;
+    }
+
+    &__container.is-open{  
         display: flex;
-        
+        flex-direction: column;
+       }
 
-
+    &__window-nav{
+        margin-bottom: auto;
     }
+
 
         &__window-nav-item{
             font-weight: 500;
@@ -55,6 +87,10 @@
             letter-spacing: 0.02em;
             
             
+        }
+
+        &__window-nav-item:not(:last-child){
+            margin-bottom: 32px;
         }
 
         &__window-nav-link{
@@ -95,4 +131,8 @@
 
 .menu__burger.is-open .menu__icon-menu {
     display: none;
+}
+
+.current{
+    color: #2196F3;
 }

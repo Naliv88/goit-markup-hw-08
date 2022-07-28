@@ -22,4 +22,13 @@
     &__studio--color {
         color: #000;
     }
+
+    &--center{
+        @media screen and (max-width: 1199px) {
+            display: flex;
+            justify-content: center;
+        
+        }
+        
+    }
 }
